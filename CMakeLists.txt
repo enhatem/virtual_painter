@@ -5,7 +5,7 @@
 cmake_minimum_required (VERSION 2.8.11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-project (openCV_course)
+project (virtual_painter)
 
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
@@ -31,9 +31,11 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 # Add executable called "helloDemo" that is built from the source files
 # "demo.cxx" and "demo_b.cxx". The extensions are automatically found.
 add_executable (main src/main.cpp)
+add_executable (color_picker src/color_picker.cpp)
 
 # Link the executable to the Hello library. Since the Hello library has
 # public include directories we will use those link directories when building
 # helloDemo
 # target_link_libraries (main LINK_PUBLIC First)
 target_link_libraries( main ${OpenCV_LIBS} )
+target_link_libraries( color_picker ${OpenCV_LIBS} )
