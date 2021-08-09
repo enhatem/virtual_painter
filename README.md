@@ -1,2 +1,2 @@
 # virtual_painter
-Virtual painter project using openCV
+This is a virtual painter project that was created using openCV and coded in C++.
